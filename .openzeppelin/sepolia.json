@@ -1,0 +1,1460 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x03A1916A00C03f8d8d2FbB3E3587Aee4734F9452",
+      "txHash": "0xb6f3207346c808917f77043f02313517c9f0df1a1b359809aa8215498a7980fe",
+      "kind": "transparent"
+    }
+  ],
+  "impls": {
+    "7db5a1b72bbeac8797fc0090e34591416c41b21f18c9cf7125c71e127586f417": {
+      "address": "0xb33627ea71A0cba26783f9E625225Cb8B595e928",
+      "txHash": "0x34b319f55a1873737f1dc5fb9bc9226c968182e10fa8803dc0e357d0ee31554e",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuction",
+            "src": "contracts\\MyAuction.sol:20"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)1385_storage)dyn_storage",
+            "contract": "MyAuction",
+            "src": "contracts\\MyAuction.sol:37"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)1385_storage)dyn_storage": {
+            "label": "struct MyAuction.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)1385_storage": {
+            "label": "struct MyAuction.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "c7a9f799ec97dd596dbbddd45e9abb6309b18c480d332e9cc0dae68c788cd06a": {
+      "address": "0x15B43684278968CAd0B322C9de50cD8037a6Cc7B",
+      "txHash": "0x4cf7014d5ddecfd8b30d6f4a0e057fbda5b5c3cdc802bf8f886fa303fbfc928d",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:34"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)1386_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:48"
+          },
+          {
+            "label": "platformFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:51"
+          },
+          {
+            "label": "paused",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:51"
+          },
+          {
+            "label": "totalAuctionsCreated",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          },
+          {
+            "label": "totalBidsPlaced",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          },
+          {
+            "label": "auctionBidCount",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)1386_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)1386_storage": {
+            "label": "struct MyAuctionV2.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "1d339583014bfb8d8695c19824477b3bdfed0fc11f15ccf6cdf8130d847c828a": {
+      "address": "0x4Ad1f942cA5786E246f87d93bf2f6Eb3189F2191",
+      "txHash": "0xa4796bb05811776d8231a50de2428be4d01284a2f5dea8adb9d0d3757cd06ed9",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:34"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)1386_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:48"
+          },
+          {
+            "label": "platformFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:51"
+          },
+          {
+            "label": "paused",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:51"
+          },
+          {
+            "label": "totalAuctionsCreated",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          },
+          {
+            "label": "totalBidsPlaced",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          },
+          {
+            "label": "auctionBidCount",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:52"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)1386_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)1386_storage": {
+            "label": "struct MyAuctionV2.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "9505f4de54519ecc93ce4edc021aeba87c3dcd926f35db731317b59d6466376f": {
+      "address": "0x2533b6bBAD88a4DCdF64FC43f453998F5764ad10",
+      "txHash": "0xcf4e494a756e75e10e033a15906d2256b9cc6c9dab439a224d6880649409958d",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:34"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)8788_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:48"
+          },
+          {
+            "label": "platformFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:49"
+          },
+          {
+            "label": "paused",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:53"
+          },
+          {
+            "label": "totalAuctionsCreated",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:54"
+          },
+          {
+            "label": "totalBidsPlaced",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:57"
+          },
+          {
+            "label": "auctionBidCount",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:59"
+          },
+          {
+            "label": "feeTiers",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_struct(FeeTier)8809_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:61"
+          },
+          {
+            "label": "useDynamicFee",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:62"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)8788_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(FeeTier)8809_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.FeeTier[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)8788_storage": {
+            "label": "struct MyAuctionV2.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_struct(FeeTier)8809_storage": {
+            "label": "struct MyAuctionV2.FeeTier",
+            "members": [
+              {
+                "label": "threshold",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "feeRate",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "32551df4485bfe54a2918dd10a81bd46442543d51e0848d88b7a64c381a49db3": {
+      "address": "0xE87E5E09850ea0874451475bd5b725Fc469c52e4",
+      "txHash": "0xc5223998ba8bb3dbd81051598b046920eea7e6a48ca78fe361b0c24b0904d926",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:34"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)1386_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:48"
+          },
+          {
+            "label": "platformFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:49"
+          },
+          {
+            "label": "paused",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:53"
+          },
+          {
+            "label": "totalAuctionsCreated",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:54"
+          },
+          {
+            "label": "totalBidsPlaced",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:57"
+          },
+          {
+            "label": "auctionBidCount",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:58"
+          },
+          {
+            "label": "feeTiers",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_struct(FeeTier)1407_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:62"
+          },
+          {
+            "label": "useDynamicFee",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:63"
+          },
+          {
+            "label": "baseFeeRate",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:63"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)1386_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(FeeTier)1407_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.FeeTier[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)1386_storage": {
+            "label": "struct MyAuctionV2.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_struct(FeeTier)1407_storage": {
+            "label": "struct MyAuctionV2.FeeTier",
+            "members": [
+              {
+                "label": "threshold",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "feeRate",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    },
+    "83f6349434161519846769e0070b94b1c898f237005487b4a1c8e6a517bd1563": {
+      "address": "0x81D52764182Ffe4230F03148Ac0D0F555954714a",
+      "txHash": "0x0498327d5599f4b0d604892a1d33a670c955df305e929e7635b17d70a82c5651",
+      "layout": {
+        "solcVersion": "0.8.28",
+        "storage": [
+          {
+            "label": "priceFeeds",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_mapping(t_address,t_address)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:34"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_struct(Auction)1386_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:48"
+          },
+          {
+            "label": "platformFee",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:49"
+          },
+          {
+            "label": "paused",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:53"
+          },
+          {
+            "label": "totalAuctionsCreated",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:54"
+          },
+          {
+            "label": "totalBidsPlaced",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:57"
+          },
+          {
+            "label": "auctionBidCount",
+            "offset": 0,
+            "slot": "6",
+            "type": "t_mapping(t_uint256,t_uint256)",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:58"
+          },
+          {
+            "label": "feeTiers",
+            "offset": 0,
+            "slot": "7",
+            "type": "t_array(t_struct(FeeTier)1407_storage)dyn_storage",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:62"
+          },
+          {
+            "label": "useDynamicFee",
+            "offset": 0,
+            "slot": "8",
+            "type": "t_bool",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:63"
+          },
+          {
+            "label": "baseFeeRate",
+            "offset": 0,
+            "slot": "9",
+            "type": "t_uint256",
+            "contract": "MyAuctionV2",
+            "src": "contracts\\MyAuctionV2.sol:63"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_struct(InitializableStorage)119_storage": {
+            "label": "struct Initializable.InitializableStorage",
+            "members": [
+              {
+                "label": "_initialized",
+                "type": "t_uint64",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "_initializing",
+                "type": "t_bool",
+                "offset": 8,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_struct(OwnableStorage)59_storage": {
+            "label": "struct OwnableUpgradeable.OwnableStorage",
+            "members": [
+              {
+                "label": "_owner",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              }
+            ],
+            "numberOfBytes": "32"
+          },
+          "t_uint64": {
+            "label": "uint64",
+            "numberOfBytes": "8"
+          },
+          "t_array(t_struct(Auction)1386_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.Auction[]",
+            "numberOfBytes": "32"
+          },
+          "t_array(t_struct(FeeTier)1407_storage)dyn_storage": {
+            "label": "struct MyAuctionV2.FeeTier[]",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_address,t_address)": {
+            "label": "mapping(address => address)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_uint256,t_uint256)": {
+            "label": "mapping(uint256 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)1386_storage": {
+            "label": "struct MyAuctionV2.Auction",
+            "members": [
+              {
+                "label": "nftAddress",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBidToken",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "highestBidValue",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "startPrice",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "7"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "8"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "9"
+              },
+              {
+                "label": "ended",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "10"
+              }
+            ],
+            "numberOfBytes": "352"
+          },
+          "t_struct(FeeTier)1407_storage": {
+            "label": "struct MyAuctionV2.FeeTier",
+            "members": [
+              {
+                "label": "threshold",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "feeRate",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              }
+            ],
+            "numberOfBytes": "64"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          }
+        },
+        "namespaces": {
+          "erc7201:openzeppelin.storage.Ownable": [
+            {
+              "contract": "OwnableUpgradeable",
+              "label": "_owner",
+              "type": "t_address",
+              "src": "@openzeppelin\\contracts-upgradeable\\access\\OwnableUpgradeable.sol:24",
+              "offset": 0,
+              "slot": "0"
+            }
+          ],
+          "erc7201:openzeppelin.storage.Initializable": [
+            {
+              "contract": "Initializable",
+              "label": "_initialized",
+              "type": "t_uint64",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:69",
+              "offset": 0,
+              "slot": "0"
+            },
+            {
+              "contract": "Initializable",
+              "label": "_initializing",
+              "type": "t_bool",
+              "src": "@openzeppelin\\contracts-upgradeable\\proxy\\utils\\Initializable.sol:73",
+              "offset": 8,
+              "slot": "0"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
