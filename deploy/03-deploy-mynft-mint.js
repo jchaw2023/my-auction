@@ -16,14 +16,21 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
 
     // 检查当前余额
     const balanceBefore = await myNFTContract.balanceOf(deployer);
+     // Mint NFT
     log(`Balance before minting: ${balanceBefore.toString()}`);
-
-    // Mint NFT
-    const tokenURI = "https://ipfs.io/ipfs/bafybeibni3xe5ipdu2dlbwlymbzg7kbppkdtbs3vv4cef2gwzgv3tksmd4/e2.json";
-    log(`Minting NFT with URI: ${tokenURI}`);
+    for (let i = 0; i < 10; i++) {
+        let tokenURI = `https://ipfs.io/ipfs/bafybeieegfqmbh5mkyggf5qppcthsxqolqbxo3x2a6si2fdgrae7nk6vki/neon_ghost_protocol_${i+1}.json`;
+        log(`Minting NFT with URI: ${tokenURI}`);
+       const mintTx = await myNFTContract.mint(deployer, tokenURI);
+       await mintTx.wait();
+       log(`Minted NFT with URI: ${tokenURI}`);
+    }
+   
+    // const tokenURI = "https://ipfs.io/ipfs/bafybeibni3xe5ipdu2dlbwlymbzg7kbppkdtbs3vv4cef2gwzgv3tksmd4/e2.json";
+    // log(`Minting NFT with URI: ${tokenURI}`);
     
-    const mintTx = await myNFTContract.mint(deployer, tokenURI);
-    await mintTx.wait();
+    // const mintTx = await myNFTContract.mint(deployer, tokenURI);
+    // await mintTx.wait();
 
     // 检查余额变化
     const balanceAfter = await myNFTContract.balanceOf(deployer);

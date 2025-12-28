@@ -11,8 +11,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   log(`Deployer: ${deployer}`);
   log(`Chain ID: ${chainId}`);
 
-  const nftName = "MyNFT";
-  const nftSymbol = "MNFT";
+  const nftName = "Neon Ghost Protocol";
+  const nftSymbol = "NGP";
   const maxSupply = 10000; // 最大供应量
 
   const myNFT = await deploy("MyNFT", {
